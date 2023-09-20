@@ -28,7 +28,7 @@ The following modules are required:
 
 ## Notes
 
-I did not implement the logging functionality for this producer. I also implemented a process to clean deque after the scheduled readings (5 for the smoker, and 20 for the food monitors)
+I did not implement the logging functionality for either producer or consumer. I also implemented a process to clean deque after the scheduled readings (5 for the smoker, and 20 for the food monitors). Below is an example from the smoker consumer:
 ```
 # Clear the deque every 5 readings
         if len(smoker_temperature_deque) % 5 == 0:
