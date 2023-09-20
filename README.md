@@ -28,7 +28,7 @@ The following modules are required:
 
 ## Notes
 
-I did not implement the logging functionality for either producer or consumer. I also implemented a process to clean deque after the scheduled readings (5 for the smoker, and 20 for the food monitors). Below is an example from the smoker consumer:
+I did not implement the logging functionality for either producer or consumer. Also, why testing the alerts,  I changed the csv file to speed up the process. I uploaded the original csv file in the repo. I implemented a process to clean deque after the scheduled readings (5 for the smoker, and 20 for the food monitors). Below is an example from the smoker consumer:
 ```
 # Clear the deque every 5 readings
         if len(smoker_temperature_deque) % 5 == 0:
