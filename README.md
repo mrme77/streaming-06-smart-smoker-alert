@@ -28,7 +28,7 @@ The following modules are required:
 
 ## Notes
 
-I did not implement the logging functionality for either the producer or the consumer. Also, why testing the alerts,  I changed the csv file to speed up the process. I uploaded the original csv file in the repo. I implemented a process to clean deque after the scheduled readings (5 for the smoker, and 20 for the food monitors). Below is an example from the smoker consumer:
+I did not implement the logging functionality for either the producer or the consumer. Also, why testing the alerts,  I changed the csv file to speed up the process and then changes the producer time to 1 second per record. I uploaded the original csv file in the repo, and recorded the alerts with the course provided smoker-temp.csv . I implemented a process to clean deque after the scheduled readings (5 for the smoker, and 20 for the food monitors). Below is an example from the smoker consumer:
 ```
 # Clear the deque every 5 readings
         if len(smoker_temperature_deque) % 5 == 0:
@@ -39,7 +39,7 @@ I did not implement the logging functionality for either the producer or the con
 
 See a running example:
 
-![Terminal Screenshot](multiplealerts.png)
+![Terminal Screenshot](alerts_real_data.png)
 
 ![RabbitMQ Screenshot](multiplerabbitmq.png)
 
@@ -47,8 +47,7 @@ See a running example:
 
 ## Suggested Readings
 
-1. Read the [RabbitMQ Tutorial - Work Queues](https://www.rabbitmq.com/tutorials/tutorial-two-python.html)
-
+1. [RabbitMQ Tutorial - Work Queues](https://www.rabbitmq.com/tutorials/tutorial-two-python.html)
 
 2. [RabbitMQ Tutorial - Work Queues](https://www.rabbitmq.com/tutorials/tutorial-two-python.html)
 
